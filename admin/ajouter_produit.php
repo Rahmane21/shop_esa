@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
 
     $nom_image = null;
     if (!empty($_FILES['image']['name'])) {
-        $ext_ok = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+        $ext_ok = ['jpg', 'jpeg', 'png', 'webp'];
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
         if (!in_array($ext, $ext_ok))               $erreurs[] = "Format image non accepté.";
         elseif ($_FILES['image']['size'] > 2097152)  $erreurs[] = "Image trop grande (max 2Mo).";

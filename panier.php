@@ -184,8 +184,7 @@ $total_ttc = $total_ht + $tva;
         <div class="recap">
             <h2>📋 Récapitulatif</h2>
             <div class="recap-ligne"><span>Sous-total HT</span><span><?= number_format($total_ht, 0, ',', ' ') ?> FCFA</span></div>
-            <div class="recap-ligne"><span>TVA (18%)</span><span><?= number_format($tva, 0, ',', ' ') ?> FCFA</span></div>
-            <div class="recap-total"><span>Total TTC</span><span><?= number_format($total_ttc, 0, ',', ' ') ?> FCFA</span></div>
+            <div class="recap-total"><span>Total </span><span><?= number_format($total_ht, 0, ',', ' ') ?> FCFA</span></div>
             <div class="actions-bas">
                 <a href="panier.php?vider=1" class="btn-vider"
                    onclick="return confirm('Vider tout le panier ?')">🗑️ Vider le panier</a>

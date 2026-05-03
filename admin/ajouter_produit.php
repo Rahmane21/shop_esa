@@ -22,9 +22,9 @@ if (isset($_GET['supprimer'])) {
     $succes = "✅ Produit supprimé avec succès.";
 }
 
-// =============================================
+
 // MISE À JOUR IMAGE D'UN PRODUIT EXISTANT
-// =============================================
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_image'])) {
     $pid = (int)$_POST['product_id'];
 
@@ -166,9 +166,9 @@ $produits   = $pdo->query("
         }
         .btn-del:hover { background:#ffcdd2; }
 
-        /* =============================================
+        
            ZONE UPLOAD IMAGE INLINE
-        ============================================= */
+        
         .upload-zone {
             display:none;                          /* cachée par défaut */
             background:#f0f7ff;

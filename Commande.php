@@ -257,13 +257,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <span>Sous-total HT</span>
                     <span><?= number_format($total_ht, 0, ',', ' ') ?> FCFA</span>
                 </div>
+                
                 <div class="total-ligne">
-                    <span>TVA (18%)</span>
-                    <span><?= number_format($tva, 0, ',', ' ') ?> FCFA</span>
-                </div>
-                <div class="total-ttc">
-                    <span>Total TTC</span>
-                    <span><?= number_format($total_ttc, 0, ',', ' ') ?> FCFA</span>
+                    <span>Total </span>
+                    <span><?= number_format($total_ht, 0, ',', ' ') ?> FCFA</span>
                 </div>
             </div>
         </div>

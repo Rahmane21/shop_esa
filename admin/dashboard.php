@@ -23,7 +23,7 @@ $nb_produits = $pdo->query("SELECT COUNT(*) FROM products")->fetchColumn();
 $nb_commandes = $pdo->query("SELECT COUNT(*) FROM orders")->fetchColumn();
 
 // Chiffre d'affaires total
-$ca_total = $pdo->query("SELECT COALESCE(SUM(total), 0) FROM orders WHERE statut != 'annulee'")->fetchColumn();
+$ca_total = $pdo->query("SELECT COALESCE(SUM(total / 1.18), 0) FROM orders WHERE statut = 'livree'")->fetchColumn();
 
 // Commandes récentes (5 dernières)
 $commandes_recentes = $pdo->query("
@@ -333,7 +333,7 @@ $top_produits = $pdo->query("
                             <td>#<?= $cmd['id'] ?></td>
                             <td><?= htmlspecialchars($cmd['client_nom']) ?></td>
                             <td style="font-weight:bold; color:#1a73e8">
-                                <?= number_format($cmd['total'], 0, ',', ' ') ?> FCFA
+                                <?= number_format($cmd['total'] /1.18, 0, ',', ' ') ?> FCFA
                             </td>
                             <td>
                                 <?php

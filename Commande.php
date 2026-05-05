@@ -49,16 +49,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($erreurs)) {
         // Adresse complète
         $adresse_complete = $adresse . ', ' . $ville . ' — Tél : ' . $tel;
+        $paiement = $_POST['paiement'] ?? 'cash';
 
         try {
             $pdo->beginTransaction();
 
             // 1. Créer la commande
             $stmt = $pdo->prepare("
-                INSERT INTO orders (user_id, total, adresse, statut)
-                VALUES (?, ?, ?, 'en_attente')
-            ");
-            $stmt->execute([$user_id, $total_ttc, $adresse_complete]);
+            INSERT INTO orders (user_id, total, adresse, statut, paiement)
+            VALUES (?, ?, ?, 'en_attente', ?)
+        ");
+        $stmt->execute([$user_id, $total_ttc, $adresse_complete, $paiement]);
             $order_id = $pdo->lastInsertId();
 
             // 2. Insérer chaque article dans order_items + décrémenter le stock

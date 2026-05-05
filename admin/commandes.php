@@ -257,10 +257,21 @@ foreach ($compteurs as $c) $nb_statut[$c['statut']] = $c['nb'];
                 </div>
 
                 <!-- ADRESSE -->
-                <div class="cmd-adresse">
-                    📍 <strong>Livraison :</strong> <?= htmlspecialchars($cmd['adresse']) ?>
-                </div>
-
+                <!-- ADRESSE -->
+<div class="cmd-adresse">
+    📍 <strong>Livraison :</strong> <?= htmlspecialchars($cmd['adresse']) ?>
+    <br>
+    💳 <strong>Paiement :</strong> 
+    <?php if ($cmd['paiement'] === 'mobile'): ?>
+        <span style="background:#e3f0ff; color:#1a73e8; padding:2px 8px; border-radius:10px; font-size:12px;">
+            📱 Mobile Money
+        </span>
+    <?php else: ?>
+        <span style="background:#fff8e1; color:#795548; padding:2px 8px; border-radius:10px; font-size:12px;">
+            💵 Cash à la livraison
+        </span>
+    <?php endif; ?>
+</div>
             </div>
             <?php endforeach; ?>
         <?php endif; ?>

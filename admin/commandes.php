@@ -210,7 +210,7 @@ foreach ($compteurs as $c) $nb_statut[$c['statut']] = $c['nb'];
                         <span class="cmd-num">Commande #<?= $cmd['id'] ?></span>
                         <span class="cmd-client">👤 <?= htmlspecialchars($cmd['client_nom']) ?> — <?= htmlspecialchars($cmd['client_email']) ?></span>
                         <span class="cmd-date">📅 <?= date('d/m/Y H:i', strtotime($cmd['created_at'])) ?></span>
-                        <span class="cmd-total"><?= number_format($cmd['total'] /1.18, 0, ',', ' ') ?> FCFA</span>
+                        <span class="cmd-total"><?= number_format($cmd['total_ht'] , 0, ',', ' ') ?> FCFA</span>
                     </div>
                     <?php
                     $badges = [

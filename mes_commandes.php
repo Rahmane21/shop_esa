@@ -154,7 +154,7 @@ foreach ($commandes as $cmd) {
                 <div class="infos">
                     <span class="num">Commande #<?= $cmd['id'] ?></span>
                     <span class="date">📅 <?= date('d/m/Y à H:i', strtotime($cmd['created_at'])) ?></span>
-                    <span class="total"><?= number_format($cmd['total'], 0, ',', ' ') ?> FCFA</span>
+                    <span class="total"><?= number_format($cmd['total']/1.18, 0, ',', ' ') ?> FCFA</span>
                 </div>
                 <?php
                 $badges = [

@@ -224,9 +224,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                            required>
                 </div>
 
-                <div style="background:#fff8e1; border:1px solid #ffe082; border-radius:8px; padding:12px; font-size:13px; color:#795548; margin-top:8px;">
-                    💳 <strong>Paiement :</strong> À la livraison (cash)
-                </div>
+                <<div class="form-group">
+    <label>Mode de paiement</label>
+  <div class="form-group">
+    <label style="display:block; font-size:13px; font-weight:bold; color:#555; margin-bottom:8px;">
+        💳 Mode de paiement
+    </label>
+    <select name="paiement" style="
+        width:100%;
+        padding:12px 14px;
+        border:1px solid #ddd;
+        border-radius:8px;
+        font-size:14px;
+        font-family:Arial,sans-serif;
+        background:white;
+        color:#333;
+        cursor:pointer;
+    ">
+        <option value="cash">💵 Paiement à la livraison (cash)</option>
+        <option value="mobile">📱 Mobile Money (T-Money / Flooz) — 90813024 / 97160715</option>
+    </select>
+
+    <!-- Message qui change selon le choix -->
+    <div id="msg-paiement" style="
+        margin-top:10px;
+        padding:12px 14px;
+        border-radius:8px;
+        font-size:13px;
+        display:none;
+    "></div>
+</div>
+
+<script>
+document.querySelector('select[name="paiement"]').addEventListener('change', function() {
+    const msg = document.getElementById('msg-paiement');
+    if (this.value === 'mobile') {
+        msg.style.display = 'block';
+        msg.style.background = '#e3f0ff';
+        msg.style.border = '1px solid #90caf9';
+        msg.style.color = '#1a73e8';
+        msg.innerHTML = '📱 Envoyez le montant au <strong>90813024</strong> ou <strong>97160715</strong> avant la livraison.';
+    } else {
+        msg.style.display = 'block';
+        msg.style.background = '#fff8e1';
+        msg.style.border = '1px solid #ffe082';
+        msg.style.color = '#795548';
+        msg.innerHTML = '💵 Vous payez en <strong>cash</strong> directement à la livraison.';
+    }
+});
+</script>
+</div>
 
                 <button type="submit" class="btn-commander">
                     ✅ Confirmer la commande

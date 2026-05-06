@@ -294,6 +294,22 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
     <?php endif; ?>
 </div>
+<!-- FOOTER -->
+<footer style="
+    background: blue;
+    border-top: 1px solid #23272f;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+">
+    <p style="color: black; font-size: 13px;">
+        &copy; <?= date('Y') ?> 
+        <strong style="color: white;">ShopESA</strong> 
+        — Développé par 
+        <strong style="color: white;">Rahxime</strong>
+        · ESA-AGOE Licence 2
+    </p>
+</footer>
 
 </body>
 </html>

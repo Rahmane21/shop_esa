@@ -678,8 +678,8 @@
 
 <footer>
     <div class="logo">🛍️ Shop<span style="color: var(--blue)">ESA</span></div>
-    <div class="logo">🛍️ Shop<span style="color: var(--blue)">ESA</span></div>
     <div class="num"> Tel: 97000000 /90252525 <span style="color: var(--blue)">@contact_ESA</span></div>
+    <div class="logo">🛍️ Shop<span style="color: var(--blue)">ESA</span></div>
     
 </footer>
 

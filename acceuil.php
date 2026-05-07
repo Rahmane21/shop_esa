@@ -511,7 +511,7 @@
     <div class="nav-links">
         <a href="#features">Fonctionnalités</a>
         <a href="#comment">Comment ça marche</a>
-        <a href="connexion.php">Se connecter</a>
+        <a href="connexion.php"> 🔑Se connecter</a>
         <a href="inscription.php" class="btn-nav">Créer un compte</a>
     </div>
 </nav>
@@ -534,12 +534,7 @@
     </p>
 
     <div class="hero-cta">
-        <a href="inscription.php" class="btn-primary">
-            🚀 Commencer maintenant
-        </a>
-        <a href="connexion.php" class="btn-secondary">
-            🔑 Se connecter
-        </a>
+       
     </div>
 </div>
 

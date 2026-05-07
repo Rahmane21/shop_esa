@@ -564,7 +564,7 @@
         <span class="stat-label">Produits disponibles</span>
     </div>
     <div class="stat-item">
-        <span class="stat-num">1 200+</span>
+        <span class="stat-num">1000+</span>
         <span class="stat-label">Utilisateurs inscrits</span>
     </div>
     <div class="stat-item">
@@ -591,7 +591,7 @@
     <div class="feature-card">
         <div class="feature-icon">🛒</div>
         <h3>Panier intelligent</h3>
-        <p>Ajoutez vos produits, gérez vos quantités et validez votre commande en quelques clics.</p>
+        <p>Ajoutez vos produits, gérez vos quantités et validez votre commande en quelques minutes.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">🔍</div>
@@ -606,17 +606,17 @@
     <div class="feature-card">
         <div class="feature-icon">⚙️</div>
         <h3>Espace administrateur</h3>
-        <p>Gestion complète des produits, catégories, stocks et commandes depuis un tableau de bord dédié.</p>
+        <p>Gestion complète des produits, catégories, stocks et commandes depuis un tableau de bord Administré.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">📦</div>
         <h3>Suivi des stocks</h3>
-        <p>Disponibilité en temps réel. Ne commandez plus un produit en rupture de stock.</p>
+        <p>Disponibilité en temps réel. Ne commandez plus un produit  qui est en rupture de stock.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">💳</div>
         <h3>Paiement en FCFA</h3>
-        <p>Prix affichés en FCFA, adaptés au contexte local pour une transparence totale.</p>
+        <p>Prix affichés en FCFA, adaptés au contexte local pour une transparence totale et payer de 2 facons.</p>
     </div>
 </div>
 ```
@@ -678,8 +678,9 @@
 
 <footer>
     <div class="logo">🛍️ Shop<span style="color: var(--blue)">ESA</span></div>
-    <p>&copy; <?php echo date('Y'); ?> <strong>ShopESA</strong> — Développé par <strong>Rahxime</strong> · ESA-AGOE Licence 2</p>
-    <p style="color: rgba(255,255,255,0.25); font-size:12px;">Tous droits réservés</p>
+    <div class="logo">🛍️ Shop<span style="color: var(--blue)">ESA</span></div>
+    <div class="num"> Tel: 97000000 /90252525 <span style="color: var(--blue)">@contact_ESA</span></div>
+    
 </footer>
 
 </body>

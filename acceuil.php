@@ -511,8 +511,6 @@
     <div class="nav-links">
         <a href="#features">Fonctionnalités</a>
         <a href="#comment">Comment ça marche</a>
-        <a href="connexion.php"> 🔑Se connecter</a>
-        <a href="inscription.php" class="btn-nav">Créer un compte</a>
     </div>
 </nav>
 
@@ -636,13 +634,13 @@
 <div class="steps">
     <div class="step">
         <div class="step-num">1</div>
-        <h3>Créez un compte</h3>
-        <p>Inscrivez-vous gratuitement en quelques secondes avec vos informations.</p>
+        <h3>Acces a la page d'Acceuil</h3>
+        <p>Explorez tous nos produits par catégorie et trouvez ce qu'il vous faut.</p>
     </div>
     <div class="step">
         <div class="step-num">2</div>
-        <h3>Parcourez le catalogue</h3>
-        <p>Explorez tous nos produits par catégorie et trouvez ce qu'il vous faut.</p>
+        <h3>Connexion et inscription</h3>
+        <p>Inscrivez vous gratuitement en quelques secondes avec vos information.</p>
     </div>
     <div class="step">
         <div class="step-num">3</div>
@@ -665,11 +663,8 @@
     <h2>Prêt à commencer<br>à faire vos achats ?</h2>
     <p>Rejoignez la communauté ShopESA dès aujourd'hui — c'est gratuit.</p>
     <div class="cta-buttons">
-        <a href="inscription.php" class="btn-primary">
-            🎉 Créer mon compte gratuitement
-        </a>
-        <a href="connexion.php" class="btn-secondary">
-            J'ai déjà un compte →
+        <a href="index.php" class="btn-primary">
+            🎉 Parcourez les produits
         </a>
     </div>
 </section>

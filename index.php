@@ -3,10 +3,7 @@ session_start();
 require_once 'config.php';
 
 // Rediriger si pas connecté
-if (!isset($_SESSION['user_id'])) {
-    header('Location: connexion.php');
-    exit;
-}
+
 
 // Récupérer les catégories
 $categories = $pdo->query("SELECT * FROM categories")->fetchAll(PDO::FETCH_ASSOC);
@@ -59,16 +56,18 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
             font-size: 22px;
             font-weight: bold;
         }
-        nav .user-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        nav a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 10px;
+    border-radius: 5px;
         }
         nav a {
             color: white;
             text-decoration: none;
             background: rgba(255,255,255,0.2);
-            padding: 8px 15px;
+            padding: 8px 15px; 
             border-radius: 5px;
         }
         nav a:hover { background: rgba(255,255,255,0.3); }
@@ -212,15 +211,18 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- NAVBAR -->
 <nav>
-    <div class="logo">🛍️ ShopESA</div>
-    <div class="user-info">
-        <span>👤 <?php echo $_SESSION['user_nom']; ?></span>
-        <?php if ($_SESSION['user_role'] === 'admin'): ?>
-            <a href="admin/dashboard.php">⚙️ Administrateur</a>
-        <?php endif; ?>
-        <a href="panier.php">🛒 Panier</a>
-        <a href="deconnexion.php">Déconnexion</a>
-    </div>
+<div class="logo">🛍️ ShopESA</div>
+<?php if (isset($_SESSION['user_id'])): ?>
+    <span>👤 <?= htmlspecialchars($_SESSION['user_nom']) ?></span>
+    <?php if ($_SESSION['user_role'] === 'admin'): ?>
+        <a href="admin/dashboard.php">⚙️ Admin</a>
+    <?php endif; ?>
+    <a href="panier.php">🛒 Panier</a>
+    <a href="deconnexion.php">Déconnexion</a>
+<?php else: ?>
+    <a href="connexion.php">🔐 Connexion</a>
+    <a href="inscription.php">📝 S'inscrire</a>
+<?php endif; ?>
 </nav>
 
 <!-- CATEGORIES -->
